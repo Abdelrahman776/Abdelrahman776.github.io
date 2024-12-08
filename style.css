@@ -1,0 +1,328 @@
+@import url("https://fonts.cdnfonts.com/css/cubano");
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap");
+
+/* ---------------------------------------genral-rules------------------------------- */
+:root {
+  --dark-blue: #111827;
+  --semi-dark-blue: #1f2937;
+  --light-blue: #19405e;
+  --btn-light: #1c4769;
+  --font-primary: "Open Sans", sans-serif;
+  --font-secondary: "Cubano", sans-serif;
+}
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+html {
+  font-size: 10px;
+}
+
+body {
+  font-family: var(--font-primary);
+  line-height: 1.6;
+  color: white !important;
+
+  margin: 0 !important;
+  padding: 0 !important;
+}
+
+h2,
+h1 {
+  font-family: var(--font-secondary) !important;
+  font-weight: normal !important;
+}
+
+h1 {
+  font-size: 4.5rem;
+  line-height: 1.1;
+}
+h2 {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+h4 {
+  font-size: 1.25rem;
+}
+
+p {
+  margin-top: 0;
+  padding: 0;
+  margin-bottom: 0.5rem;
+}
+
+.normal-btn,
+.normal-btn:link {
+  background-color: var(--btn-light);
+  color: white;
+  font-weight: 600;
+  border: none;
+  padding: 1em 2em;
+  border-radius: 0.5em;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.3s ease-out;
+  box-shadow: 10px 10px 4px 1px rgba(0, 0, 255, 0.2);
+}
+
+.normal-btn:hover,
+.normal-btn:active,
+.normal-btn:focus {
+  color: white;
+  background-color: var(--light-blue);
+  box-shadow: none;
+}
+
+li {
+  list-style: none;
+}
+
+.gradient-dark-to-light {
+  background-image: linear-gradient(var(--dark-blue), var(--semi-dark-blue));
+}
+.gradient-light-to-dark {
+  background-image: linear-gradient(var(--semi-dark-blue), var(--dark-blue));
+}
+.section-pad {
+  padding: 12rem 2.2rem 1.8rem 2.2rem;
+}
+
+
+/* display popup when clicking on email or phone to tell user that it is copied to clipboard////////////////////////// */
+.popup {
+  position: fixed;
+  bottom: 24px;
+  right: 24px;
+  background-color: var(--light-blue);
+  color: #fff;
+  padding: 10px 20px;
+  border-radius: 5px;
+  font-size: 1.4rem;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+.popup.show {
+  opacity: 1;
+}
+
+
+/* ----navbar---------------------- */
+
+.header {
+  display: flex;
+  background-color: var(--dark-blue);
+  justify-content: space-between;
+  align-items: center;
+
+  padding: 1.2rem 1.8rem;
+
+  /* position: sticky; */
+}
+.logo:hover {
+  transform: scale(1.1);
+  transform: rotate(-30deg);
+  /* make full rotaion animation with transition */
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 45rem;
+}
+.link-item {
+  text-decoration: none;
+  line-height: 1.6;
+  color: white;
+  font-size: 1.5rem;
+  padding: 10px;
+  transition: all 0.3s ease-out;
+  cursor: pointer;
+}
+.link-item:hover {
+  color: #f2f2f2;
+  text-decoration: underline;
+}
+/* -----
+--herosection------------------------------------------    */
+
+#hero-section {
+  display: flex;
+  justify-content: space-around;
+  padding: 3rem 2.2rem 1.8rem 2.2rem;
+}
+#hey {
+  margin: 0;
+  font-weight: 600;
+}
+#name {
+  margin-top: 0.8rem;
+}
+
+#get-in-touch {
+  margin-top: 13rem;
+  margin-left: 1.5re;
+  font-weight: 600;
+  text-shadow: #0676a4 0 0 1rem;
+}
+
+div .normal-btn {
+  display: inline-block;
+  font-size: 2rem !important;
+  padding: 0.8rem 2.2rem;
+  box-shadow: 15px 15px 10px 6px rgba(0, 0, 255, 0.2) !important;
+  margin: 2rem 0 2rem 10rem;
+}
+
+div .normal-btn:active,
+div .normal-btn:hover,
+div .normal-btn:focus {
+  box-shadow: none !important;
+}
+
+svg {
+  fill: white;
+  width: 4rem;
+  height: 4rem;
+}
+svg:hover {
+  transform: scale(1.1);
+  transition: all 0.3s ease-out;
+}
+.main-links {
+  display: flex;
+}
+
+.contacts {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: start;
+}
+.contacts > a {
+  align-self: center;
+}
+
+.intro-text {
+  align-self: center;
+}
+
+.hero-img {
+  width: 60rem;
+  /* height: 60rem; */
+  aspect-ratio: 1 / 1;
+  background-image: url("images/a3.jpg");
+
+  background-repeat: no-repeat;
+
+  background-size: cover;
+  background-position: center;
+
+  border-radius: 16px;
+}
+
+
+
+/* -------------------------------------------------- */
+
+/* <!-- ----about section ---------------------------> */
+#about-section {
+  display: flex;
+  justify-content: space-around;
+}
+.about-text {
+  max-width: 60rem;
+}
+
+.about-text p {
+  font-size: 1.8rem;
+}
+
+.about-img {
+  width: 40rem;
+  aspect-ratio: 9/16;
+  background-image: url("images/a2.jpg");
+  background-attachment: scroll;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  border-radius: 16px;
+}
+
+/* =====skillssection==== ========================-----------------=================== */
+
+#skills-section {
+  display: flex;
+  flex-direction: column;
+}
+
+#skills-text,
+#skills,
+#projects-section h2 {
+  text-align: center;
+}
+#skills-text {
+  font-size: 1.8rem;
+}
+#skills-gallery {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  margin: 10rem 10rem 0 10rem;
+  gap: 5rem;
+
+  align-items: center;
+
+  /* display: flex; */
+}
+#skills-gallery div {
+  text-align: center;
+}
+
+#skills-gallery img {
+  width: 12rem;
+}
+
+/* ////projects section///////////////////////// */
+
+.project-container {
+  box-shadow: 0 0 3px 3px rgba(0, 255, 255, 0.15);
+
+  border-radius: 16px;
+  padding: 1rem;
+  margin-bottom: 4rem;
+}
+
+.project-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.project-text {
+  font-size: 2rem;
+}
+
+.project-img {
+  max-width: 64rem !important;
+  /* max-height: 44rem!important; */
+}
+
+/* footer==================== */
+
+.contact-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  padding-bottom: inherit;
+}
+
+.phone-container,
+.email-container {
+  display: flex;
+  flex-direction: column;
+
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
